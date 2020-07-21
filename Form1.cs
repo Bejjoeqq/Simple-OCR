@@ -30,5 +30,10 @@ namespace Simple_OCR
             Page page = engine.Process(img,PageSegMode.Auto);
             richTextBox1.Text = page.GetText();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(richTextBox1.Text);
+        }
     }
 }
